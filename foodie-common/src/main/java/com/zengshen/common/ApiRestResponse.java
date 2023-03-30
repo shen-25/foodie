@@ -13,7 +13,7 @@ import java.util.Map;
 public class ApiRestResponse {
 
     // 响应状态码
-    private Integer status;
+    private int status;
 
     // 响应中的信息
     private String msg;

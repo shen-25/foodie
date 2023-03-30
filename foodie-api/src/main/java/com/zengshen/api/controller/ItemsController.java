@@ -1,18 +1,22 @@
 package com.zengshen.api.controller;
 
 import com.zengshen.common.ApiRestResponse;
+import com.zengshen.common.constants.Constant;
+import com.zengshen.common.utils.PageInfoResult;
 import com.zengshen.model.pojo.Items;
 import com.zengshen.model.pojo.ItemsImg;
 import com.zengshen.model.pojo.ItemsParam;
 import com.zengshen.model.pojo.ItemsSpec;
+import com.zengshen.model.vo.CommentLevelCountsVO;
 import com.zengshen.model.vo.ItemInfoVO;
+import com.zengshen.service.CommentService;
 import com.zengshen.service.ItemsService;
 import io.swagger.annotations.Api;
+import io.swagger.models.auth.In;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +26,9 @@ public class ItemsController {
 
     @Autowired
     private ItemsService itemService;
+
+    @Autowired
+    private CommentService commentService;
 
 
     @GetMapping("/info/{itemId}")
@@ -41,5 +48,38 @@ public class ItemsController {
         itemInfoVO.setItemParams(itemsParam);
 
         return ApiRestResponse.success(itemInfoVO);
+    }
+
+    @GetMapping("/commentLevel")
+    public ApiRestResponse commentLevel(@RequestParam String itemId) {
+        if (StringUtils.isBlank(itemId)) {
+            return ApiRestResponse.errorMsg("itemId不能为空");
+        }
+        CommentLevelCountsVO commentLevelCounts = commentService.getCommentLevelCounts(itemId);
+        return ApiRestResponse.success(commentLevelCounts);
+    }
+
+    @GetMapping("comments")
+    public ApiRestResponse comments(@RequestParam String itemId, @RequestParam(required = false) String level,
+                                    @RequestParam(required = false) Integer page, @RequestParam(required = false) Integer pageSize) {
+        if (StringUtils.isBlank(itemId)) {
+            return ApiRestResponse.errorMsg("itemId不能为空");
+        }
+        if (page == null) {
+            page = Constant.COMMON_PAGE;
+        }
+        if (pageSize == null) {
+            pageSize = Constant.COMMON_PAGE_SIZE;
+        }
+        if (page > Constant.MAX_PAGE) {
+            page = Constant.MAX_PAGE;
+        }
+        if (pageSize > Constant.MAX_PAGE_SIZE) {
+            page = Constant.MAX_PAGE_SIZE;
+        }
+
+        PageInfoResult pageInfoResult = commentService.getCommentList(itemId, level, page, pageSize);
+        return ApiRestResponse.success(pageInfoResult);
+
     }
 }
