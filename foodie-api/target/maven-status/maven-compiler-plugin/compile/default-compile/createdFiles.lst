@@ -4,3 +4,4 @@ com\zengshen\api\controller\TestController.class
 com\zengshen\api\controller\IndexController.class
 com\zengshen\Application.class
 com\zengshen\api\config\GlobalCorsConfig.class
+com\zengshen\api\controller\ItemsController.class

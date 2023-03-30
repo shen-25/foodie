@@ -1,7 +1,7 @@
 com\zengshen\model\bo\RegisterBO.class
 com\zengshen\model\pojo\Users.class
+com\zengshen\model\pojo\Category.class
 com\zengshen\model\vo\CategoryVO.class
 com\zengshen\model\pojo\Carousel.class
 com\zengshen\model\bo\UserBO.class
-com\zengshen\model\pojo\Category.class
 com\zengshen\model\vo\SubCategoryVO.class

@@ -13,6 +13,7 @@ import com.zengshen.service.UserService;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
@@ -52,6 +53,7 @@ public class UserServiceImpl extends BaseInfoProperties implements UserService{
         return usersMapper.selectOneByExample(example);
     }
 
+    @Transactional
     @Override
     public Users createUser(RegisterBO registerBO) {
         Users tempUser = this.selectByUsername(registerBO.getUsername());

@@ -2,11 +2,11 @@ package com.zengshen.mapper;
 
 import com.zengshen.model.vo.CategoryVO;
 import com.zengshen.model.vo.NewItemsVO;
-import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Mapper
+@Repository
 public interface CategoryCustomMapper {
     List<CategoryVO> getSubCatList(String rootCatId);
 
