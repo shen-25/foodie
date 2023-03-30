@@ -1,0 +1,5 @@
+com\zengshen\api\controller\UserController.class
+com\zengshen\api\Application.class
+com\zengshen\api\config\Knife4jConfiguration.class
+com\zengshen\api\controller\TestController.class
+com\zengshen\api\config\GlobalCorsConfig.class
