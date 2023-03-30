@@ -1,2 +1,7 @@
+com\zengshen\service\impl\CategoryServiceImpl.class
 com\zengshen\service\impl\UserServiceImpl.class
+com\zengshen\base\BaseInfoProperties.class
+com\zengshen\service\CarouselService.class
+com\zengshen\service\CategoryService.class
 com\zengshen\service\UserService.class
+com\zengshen\service\impl\CarouselServiceImpl.class

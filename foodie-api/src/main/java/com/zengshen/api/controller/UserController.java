@@ -1,14 +1,13 @@
 package com.zengshen.api.controller;
 
-import com.zengshen.bo.RegisterBO;
-import com.zengshen.bo.UserBO;
+import com.zengshen.model.bo.RegisterBO;
+import com.zengshen.model.bo.UserBO;
 import com.zengshen.common.ApiRestResponse;
 import com.zengshen.common.enums.BusinessExceptionEnum;
 import com.zengshen.common.utils.CookieUtil;
 import com.zengshen.common.utils.JsonUtil;
-import com.zengshen.pojo.Users;
+import com.zengshen.model.pojo.Users;
 import com.zengshen.service.UserService;
-import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

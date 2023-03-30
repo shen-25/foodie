@@ -1,4 +1,4 @@
-package com.zengshen.pojo;
+package com.zengshen.model.pojo;
 
 import java.util.Date;
 import javax.persistence.*;

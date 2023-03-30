@@ -1,1 +1,4 @@
+com\zengshen\mapper\CategoryCustomMapper.class
 com\zengshen\mapper\UsersMapper.class
+com\zengshen\mapper\CategoryMapper.class
+com\zengshen\mapper\CarouselMapper.class

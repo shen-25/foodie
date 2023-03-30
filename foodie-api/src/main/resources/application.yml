@@ -17,3 +17,10 @@ spring:
       pool-name: DataSourceHikariCP           # 连接池的名字
       max-lifetime: 18000000                  # 连接池的最大生命时长（毫秒），超时则会被释放（retired）
       connection-test-query: SELECT 1
+
+
+# 整合 mybatis
+# tkmapper这个必须添加不然报错了
+mybatis:
+  type-aliases-package: com.imooc.model       # 所有实体类类所在的包路径
+  mapper-locations: classpath:mapper/*.xml    # mapper映射文件

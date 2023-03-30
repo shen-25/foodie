@@ -1,14 +1,14 @@
 package com.zengshen.service.impl;
 
 import com.zengshen.base.BaseInfoProperties;
-import com.zengshen.bo.RegisterBO;
+import com.zengshen.model.bo.RegisterBO;
 import com.zengshen.common.enums.BusinessExceptionEnum;
 import com.zengshen.common.enums.Sex;
 import com.zengshen.common.exception.BusinessException;
 import com.zengshen.common.utils.DateUtil;
 import com.zengshen.common.utils.MD5Util;
 import com.zengshen.mapper.UsersMapper;
-import com.zengshen.pojo.Users;
+import com.zengshen.model.pojo.Users;
 import com.zengshen.service.UserService;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;

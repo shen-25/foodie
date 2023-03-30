@@ -1,7 +1,7 @@
 package com.zengshen.service;
 
-import com.zengshen.bo.RegisterBO;
-import com.zengshen.pojo.Users;
+import com.zengshen.model.bo.RegisterBO;
+import com.zengshen.model.pojo.Users;
 
 public interface UserService {
     Users login(String username, String password);

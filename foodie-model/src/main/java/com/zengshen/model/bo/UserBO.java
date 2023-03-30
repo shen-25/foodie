@@ -1,4 +1,4 @@
-package com.zengshen.bo;
+package com.zengshen.model.bo;
 
 import lombok.Data;
 

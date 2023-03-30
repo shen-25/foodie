@@ -1,6 +1,6 @@
 package com.zengshen.mapper;
 
-import com.zengshen.pojo.Users;
+import com.zengshen.model.pojo.Users;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 

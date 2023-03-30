@@ -1,3 +1,4 @@
+com\zengshen\common\utils\CookieUtil.class
 org\n3r\idworker\Id.class
 org\n3r\idworker\strategy\DefaultRandomCodeStrategy.class
 org\n3r\idworker\utils\HttpReq.class
@@ -24,6 +25,7 @@ org\n3r\idworker\DayCode.class
 org\n3r\idworker\strategy\DayPrefixRandomCodeStrategy.class
 com\zengshen\common\utils\JsonUtil.class
 org\n3r\idworker\IdWorker.class
+com\zengshen\common\utils\DateUtil.class
 org\n3r\idworker\strategy\DefaultWorkerIdStrategy$1.class
 com\zengshen\common\exception\BusinessException.class
 org\n3r\idworker\utils\Serializes.class
@@ -31,3 +33,4 @@ org\n3r\idworker\InvalidSystemClock.class
 org\n3r\idworker\utils\Ip.class
 org\n3r\idworker\strategy\DefaultWorkerIdStrategy$2.class
 org\n3r\idworker\strategy\DefaultWorkerIdStrategy.class
+com\zengshen\common\enums\Sex.class

@@ -24,7 +24,7 @@
         </jdbcConnection>
 
         <!--实体-->
-        <javaModelGenerator targetPackage="com.zengshen.pojo"
+        <javaModelGenerator targetPackage="com.zengshen.model.pojo"
                             targetProject="src/main/java"/>
 
         <!--mapper.xml-->

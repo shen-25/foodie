@@ -9,6 +9,7 @@ E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\utils
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\InvalidSystemClock.java
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\Id.java
 E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\utils\PageInfoResultBuilder.java
+E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\utils\CookieUtil.java
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\strategy\DayPrefixRandomCodeStrategy.java
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\Code.java
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\utils\IPv4Utils.java
@@ -19,9 +20,11 @@ E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\excep
 E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\exception\MyCustomException.java
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\Sid.java
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\utils\Ip.java
+E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\utils\DateUtil.java
 E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\utils\MD5Util.java
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\utils\Props.java
 E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\utils\JsonUtil.java
+E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\enums\Sex.java
 E:\java-web-project\foodie\foodie-common\src\main\java\org\n3r\idworker\RandomCodeStrategy.java
 E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\enums\BusinessExceptionEnum.java
 E:\java-web-project\foodie\foodie-common\src\main\java\com\zengshen\common\ApiRestResponse.java
