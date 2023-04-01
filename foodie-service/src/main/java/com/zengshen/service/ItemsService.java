@@ -1,5 +1,6 @@
 package com.zengshen.service;
 
+import com.zengshen.common.utils.PageInfoResult;
 import com.zengshen.model.pojo.Items;
 import com.zengshen.model.pojo.ItemsImg;
 import com.zengshen.model.pojo.ItemsParam;
@@ -33,5 +34,10 @@ public interface ItemsService {
      */
     public ItemsParam selectItemParam(String itemId);
 
+    /**
+     * 根据分类id和排序规则查找商品
+     */
+    PageInfoResult searchItemsByCategoryId(String catId, String sort, int page, int pageSize);
 
+    PageInfoResult searchByKeyword(String keywords, String sort, int page, int pageSize);
 }

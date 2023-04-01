@@ -82,4 +82,61 @@ public class ItemsController {
         return ApiRestResponse.success(pageInfoResult);
 
     }
+
+    /**
+     * 搜索商品列表
+     * @param catId 三级分类id
+     * @param sort 排序规则
+     */
+    @GetMapping("catItems")
+    public ApiRestResponse catItems(@RequestParam String catId, @RequestParam(required = false) String sort,
+                                    @RequestParam(required = false) Integer page, @RequestParam(required = false) Integer pageSize) {
+        if (StringUtils.isBlank(catId)) {
+            return ApiRestResponse.errorMsg("catId 不能为空");
+        }
+        if (page == null) {
+            page = Constant.COMMON_PAGE;
+        }
+        if (pageSize == null) {
+            pageSize = Constant.ITEMS_COMMON_PAGE_SIZE;
+        }
+        if (page > Constant.MAX_PAGE) {
+            page = Constant.MAX_PAGE;
+        }
+        if (pageSize > Constant.MAX_PAGE_SIZE) {
+            page = Constant.MAX_PAGE_SIZE;
+        }
+        PageInfoResult pageInfoResult = itemService.searchItemsByCategoryId(catId, sort, page, pageSize);
+        return ApiRestResponse.success(pageInfoResult);
+
+    }
+
+    /**
+     * 搜索商品列表
+     * @param keywords 三级分类id
+     * @param sort 排序规则
+     */
+    @GetMapping("search")
+    public ApiRestResponse searchByKeyword(@RequestParam String keywords, @RequestParam(required = false) String sort,
+                                    @RequestParam(required = false) Integer page, @RequestParam(required = false) Integer pageSize) {
+        if (StringUtils.isBlank(keywords)) {
+            return ApiRestResponse.errorMsg("keywords 不能为空");
+        }
+        if (page == null) {
+            page = Constant.COMMON_PAGE;
+        }
+        if (pageSize == null) {
+            pageSize = Constant.ITEMS_COMMON_PAGE_SIZE;
+        }
+        if (page > Constant.MAX_PAGE) {
+            page = Constant.MAX_PAGE;
+        }
+        if (pageSize > Constant.MAX_PAGE_SIZE) {
+            page = Constant.MAX_PAGE_SIZE;
+        }
+        PageInfoResult pageInfoResult = itemService.searchByKeyword(keywords, sort, page, pageSize);
+        return ApiRestResponse.success(pageInfoResult);
+
+    }
+
 }
