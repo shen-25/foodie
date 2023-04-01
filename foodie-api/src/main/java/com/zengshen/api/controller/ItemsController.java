@@ -9,9 +9,12 @@ import com.zengshen.model.pojo.ItemsParam;
 import com.zengshen.model.pojo.ItemsSpec;
 import com.zengshen.model.vo.CommentLevelCountsVO;
 import com.zengshen.model.vo.ItemInfoVO;
+import com.zengshen.model.vo.ShopCartVO;
 import com.zengshen.service.CommentService;
 import com.zengshen.service.ItemsService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import io.swagger.models.auth.In;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -137,6 +140,22 @@ public class ItemsController {
         PageInfoResult pageInfoResult = itemService.searchByKeyword(keywords, sort, page, pageSize);
         return ApiRestResponse.success(pageInfoResult);
 
+    }
+
+
+    // 用于用户长时间未登录网站，刷新购物车中的数据（主要是商品价格），类似京东淘宝
+    @ApiOperation(value = "根据商品规格ids查找最新的商品数据", notes = "根据商品规格ids查找最新的商品数据", httpMethod = "GET")
+    @GetMapping("/refresh")
+    public ApiRestResponse refresh(
+            @ApiParam(name = "itemSpecIds", value = "拼接的规格ids", required = true, example = "1001,1003,1005")
+            @RequestParam String itemSpecIds) {
+
+        if (StringUtils.isBlank(itemSpecIds)) {
+            return ApiRestResponse.success();
+        }
+
+        List<ShopCartVO> list = itemService.selectItemsBySpecIds(itemSpecIds);
+        return ApiRestResponse.success(list);
     }
 
 }

@@ -17,6 +17,18 @@ spring:
       pool-name: DataSourceHikariCP           # 连接池的名字
       max-lifetime: 18000000                  # 连接池的最大生命时长（毫秒），超时则会被释放（retired）
       connection-test-query: SELECT 1
+  redis:
+    host: zengshen.org
+    port: 6379
+    database: 1
+    password: 123456
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: 1000
+
 
 
 # 整合 mybatis
@@ -24,3 +36,6 @@ spring:
 mybatis:
   type-aliases-package: com.imooc.model       # 所有实体类类所在的包路径
   mapper-locations: classpath:mapper/*.xml    # mapper映射文件
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl   # 打印sql语句
+

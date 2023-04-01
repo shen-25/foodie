@@ -6,6 +6,7 @@ import com.zengshen.model.pojo.ItemsImg;
 import com.zengshen.model.pojo.ItemsParam;
 import com.zengshen.model.pojo.ItemsSpec;
 import com.zengshen.model.vo.ItemInfoVO;
+import com.zengshen.model.vo.ShopCartVO;
 
 import java.util.List;
 
@@ -40,4 +41,6 @@ public interface ItemsService {
     PageInfoResult searchItemsByCategoryId(String catId, String sort, int page, int pageSize);
 
     PageInfoResult searchByKeyword(String keywords, String sort, int page, int pageSize);
+
+    List<ShopCartVO> selectItemsBySpecIds(String itemSpecIds);
 }

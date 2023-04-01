@@ -1,10 +1,9 @@
 package com.zengshen.mapper;
 
-import com.zengshen.model.pojo.ItemsComments;
+import com.zengshen.model.pojo.UserAddress;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
 @Repository
-public interface ItemsCommentsMapper extends Mapper<ItemsComments> {
-
+public interface UserAddressMapper extends Mapper<UserAddress> {
 }

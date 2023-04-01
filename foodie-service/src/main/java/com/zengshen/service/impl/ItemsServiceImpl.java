@@ -9,12 +9,17 @@ import com.zengshen.model.pojo.ItemsImg;
 import com.zengshen.model.pojo.ItemsParam;
 import com.zengshen.model.pojo.ItemsSpec;
 import com.zengshen.model.vo.SearchItemsVO;
+import com.zengshen.model.vo.ShopCartVO;
 import com.zengshen.service.ItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ItemsServiceImpl implements ItemsService {
@@ -75,5 +80,12 @@ public class ItemsServiceImpl implements ItemsService {
         PageHelper.startPage(page, pageSize);
         List<SearchItemsVO> keywordsList = itemsCustomMapper.searchItemsByKeyword(keywords, sort);
         return PageUtil.setPageInfoResult(keywordsList, page);
+    }
+
+    @Override
+    public List<ShopCartVO> selectItemsBySpecIds(String itemSpecIds) {
+        String ids[] = itemSpecIds.split(",");
+        List<String> specIdsList = Arrays.stream(ids).collect(Collectors.toList());
+        return itemsCustomMapper.queryItemsBySpecIds(specIdsList);
     }
 }
