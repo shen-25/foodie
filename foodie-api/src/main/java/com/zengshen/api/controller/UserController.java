@@ -9,10 +9,13 @@ import com.zengshen.common.utils.JsonUtil;
 import com.zengshen.model.pojo.Users;
 import com.zengshen.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("passport")
@@ -71,5 +74,4 @@ public class UserController {
         return ApiRestResponse.success(user);
 
     }
-
 }

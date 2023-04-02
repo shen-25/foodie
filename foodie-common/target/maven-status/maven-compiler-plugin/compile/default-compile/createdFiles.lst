@@ -2,7 +2,6 @@ com\zengshen\common\utils\CookieUtil.class
 org\n3r\idworker\Id.class
 org\n3r\idworker\strategy\DefaultRandomCodeStrategy.class
 org\n3r\idworker\utils\HttpReq.class
-com\zengshen\common\utils\PageInfoResultBuilder.class
 org\n3r\idworker\Code.class
 org\n3r\idworker\strategy\FileLock.class
 com\zengshen\common\exception\GlobalExceptionHandler.class
@@ -28,6 +27,7 @@ org\n3r\idworker\IdWorker.class
 com\zengshen\common\utils\DateUtil.class
 org\n3r\idworker\strategy\DefaultWorkerIdStrategy$1.class
 com\zengshen\common\exception\BusinessException.class
+com\zengshen\common\utils\MinioUtil.class
 org\n3r\idworker\utils\Serializes.class
 org\n3r\idworker\InvalidSystemClock.class
 org\n3r\idworker\utils\Ip.class

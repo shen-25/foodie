@@ -39,3 +39,10 @@ mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl   # 打印sql语句
 
+
+minio:
+  endpoint: http://zengshen.org:9000
+  bucket-name: foodie
+  access-key: root
+  secret-key: 12345678
+  file-host: http://zengshen.org:9000

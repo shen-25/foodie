@@ -1,4 +1,8 @@
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\vo\ShopCartVO.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\bo\ShopCartBO.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\OrderStatus.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\bo\RegisterBO.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\bo\AddressBO.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\Carousel.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\vo\NewItemsVO.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\vo\ItemInfoVO.java
@@ -8,7 +12,13 @@ E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\vo\Simp
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\ItemsParam.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\ItemsImg.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\vo\CategoryVO.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\vo\CommentVO.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\Items.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\bo\UserBO.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\UserAddress.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\vo\CommentLevelCountsVO.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\bo\center\CenterUserBO.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\ItemsComments.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\ItemsSpec.java
+E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\vo\SearchItemsVO.java
 E:\java-web-project\foodie\foodie-model\src\main\java\com\zengshen\model\pojo\Category.java

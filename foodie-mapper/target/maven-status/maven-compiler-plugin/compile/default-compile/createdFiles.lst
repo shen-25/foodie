@@ -1,7 +1,7 @@
+com\zengshen\mapper\ItemsParamMapper.class
 com\zengshen\mapper\UsersMapper.class
 com\zengshen\mapper\CategoryMapper.class
 com\zengshen\mapper\ItemsImgMapper.class
 com\zengshen\mapper\CategoryCustomMapper.class
 com\zengshen\mapper\ItemsMapper.class
-com\zengshen\mapper\ItemsParamMapper.class
 com\zengshen\mapper\CarouselMapper.class

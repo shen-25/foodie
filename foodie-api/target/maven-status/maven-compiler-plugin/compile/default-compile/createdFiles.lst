@@ -1,7 +1,10 @@
-com\zengshen\api\controller\UserController.class
 com\zengshen\api\config\Knife4jConfiguration.class
 com\zengshen\api\controller\TestController.class
 com\zengshen\api\controller\IndexController.class
+META-INF\spring-configuration-metadata.json
+com\zengshen\api\controller\ItemsController.class
+com\zengshen\api\controller\UserController.class
+com\zengshen\api\config\MinioConfig.class
 com\zengshen\Application.class
 com\zengshen\api\config\GlobalCorsConfig.class
-com\zengshen\api\controller\ItemsController.class
+com\zengshen\api\config\MinioConfigProperties.class

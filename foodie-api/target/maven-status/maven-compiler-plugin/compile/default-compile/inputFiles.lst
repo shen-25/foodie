@@ -1,7 +1,14 @@
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\base\BaseInfoProperties.java
 E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\config\GlobalCorsConfig.java
 E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\ItemsController.java
-E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\TestController.java
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\ShopCartController.java
 E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\UserController.java
-E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\config\Knife4jConfiguration.java
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\center\CenterController.java
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\config\MinioConfigProperties.java
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\AddressController.java
 E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\IndexController.java
 E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\Application.java
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\center\CenterUserController.java
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\controller\TestController.java
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\config\Knife4jConfiguration.java
+E:\java-web-project\foodie\foodie-api\src\main\java\com\zengshen\api\config\MinioConfig.java
