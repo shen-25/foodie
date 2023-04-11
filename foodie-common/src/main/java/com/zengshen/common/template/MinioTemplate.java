@@ -1,4 +1,4 @@
-package com.zengshen.api.config;
+package com.zengshen.common.template;
 
 import io.minio.*;
 import io.minio.http.Method;
@@ -13,6 +13,7 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -26,16 +27,13 @@ import java.util.Optional;
 public class MinioTemplate {
 
     private  MinioClient minioClient;
-    private  String endpoint;
-    private  String bucketName;
-    private  String accessKey;
-    private  String secretKey;
-    private String fileHost;
+    private final String endpoint;
+    private final  String bucketName;
+    private final String accessKey;
+    private final String secretKey;
+    private final String fileHost;
 
     private static final String SEPARATOR = "/";
-
-    private MinioTemplate() {
-    }
 
     public MinioTemplate(String endpoint, String bucketName, String accessKey, String secretKey,String fileHost) {
         this.endpoint = endpoint;
@@ -96,11 +94,10 @@ public class MinioTemplate {
      * 获得Bucket的策略
      */
     public  String getBucketPolicy(String bucketName) throws Exception {
-        String bucketPolicy = minioClient
+        return minioClient
                 .getBucketPolicy(GetBucketPolicyArgs.builder()
                         .bucket(bucketName)
                         .build());
-        return bucketPolicy;
     }
 
 
@@ -340,7 +337,6 @@ public class MinioTemplate {
     /**
      * 批量删除文件
      * @param keys 需要删除的文件列表
-     * @return
      */
     public  void removeFiles( List<String> keys) {
         List<DeleteObject> objects = new LinkedList<>();
@@ -382,11 +378,10 @@ public class MinioTemplate {
 
     /**
      * 将URLDecoder编码转成UTF8
-     * @param str
      */
     public  String  decodeUrlByUtf8(String str) throws UnsupportedEncodingException {
         String url = str.replaceAll("%(?![0-9a-fA-F]{2})", "%25");
-        return URLDecoder.decode(url, "UTF-8");
+        return URLDecoder.decode(url, StandardCharsets.UTF_8);
     }
 
     /******************************  Operate Files End  ******************************/

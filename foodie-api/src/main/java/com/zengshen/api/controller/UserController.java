@@ -66,6 +66,7 @@ public class UserController {
         if (!registerBO.getPassword().equals(registerBO.getConfirmPassword())) {
             return ApiRestResponse.errorEnum(BusinessExceptionEnum.PASSWORD_DOES_NOT_MATCH);
         }
+
         Users user = userService.createUser(registerBO);
 
         CookieUtil.setCookie(request, response, "user",

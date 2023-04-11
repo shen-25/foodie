@@ -1,4 +1,4 @@
-package com.zengshen.common.constants;
+package com.zengshen.common.constant;
 
 public class Constant {
 

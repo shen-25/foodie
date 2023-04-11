@@ -5,8 +5,8 @@ public enum YesOrNo {
     NO(0, "否"),
     YES(1, "是");
 
-    private int type;
-    private String desc;
+    public int type;
+    public String desc;
 
      YesOrNo(int type, String desc) {
         this.type = type;

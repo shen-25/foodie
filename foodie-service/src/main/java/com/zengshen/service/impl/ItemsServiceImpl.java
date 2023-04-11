@@ -1,6 +1,7 @@
 package com.zengshen.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.zengshen.common.enums.YesOrNo;
 import com.zengshen.common.utils.PageInfoResult;
 import com.zengshen.common.utils.PageUtil;
 import com.zengshen.mapper.*;
@@ -13,6 +14,7 @@ import com.zengshen.model.vo.ShopCartVO;
 import com.zengshen.service.ItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.ArrayList;
@@ -87,5 +89,29 @@ public class ItemsServiceImpl implements ItemsService {
         String ids[] = itemSpecIds.split(",");
         List<String> specIdsList = Arrays.stream(ids).collect(Collectors.toList());
         return itemsCustomMapper.queryItemsBySpecIds(specIdsList);
+    }
+
+    @Override
+    public ItemsSpec queryItemSpecById(String specId) {
+        return itemsSpecMapper.selectByPrimaryKey(specId);
+    }
+
+    @Override
+    public String queryItemMainImgById(String itemId) {
+        ItemsImg itemsImg = new ItemsImg();
+        itemsImg.setItemId(itemId);
+        itemsImg.setIsMain(YesOrNo.YES.type);
+        ItemsImg result = itemsImgMapper.selectOne(itemsImg);
+        return result != null ? result.getUrl() : "";
+    }
+
+    @Transactional
+    @Override
+    public void decreaseItemSpecStock(String itemSpecId, int buyCounts) {
+       // 1. 查询库存
+        int result = itemsCustomMapper.decreaseItemSpecStock(itemSpecId, buyCounts);
+        if (result != 1) {
+            throw new RuntimeException("订单创建失败，原因：库存不足!");
+        }
     }
 }

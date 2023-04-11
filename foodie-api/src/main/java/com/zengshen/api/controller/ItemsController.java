@@ -1,7 +1,7 @@
 package com.zengshen.api.controller;
 
 import com.zengshen.common.ApiRestResponse;
-import com.zengshen.common.constants.Constant;
+import com.zengshen.common.constant.Constant;
 import com.zengshen.common.utils.PageInfoResult;
 import com.zengshen.model.pojo.Items;
 import com.zengshen.model.pojo.ItemsImg;
@@ -12,13 +12,10 @@ import com.zengshen.model.vo.ItemInfoVO;
 import com.zengshen.model.vo.ShopCartVO;
 import com.zengshen.service.CommentService;
 import com.zengshen.service.ItemsService;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import io.swagger.models.auth.In;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

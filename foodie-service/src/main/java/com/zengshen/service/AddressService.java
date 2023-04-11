@@ -22,4 +22,6 @@ public interface AddressService {
     void deleteAddress(String addressId);
 
     void updateUserAddress(AddressBO addressBO);
+
+    UserAddress queryUserAddress(String userId, String addressId);
 }

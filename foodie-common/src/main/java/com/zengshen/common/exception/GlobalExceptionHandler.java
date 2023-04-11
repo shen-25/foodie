@@ -31,6 +31,11 @@ public class GlobalExceptionHandler {
         return ApiRestResponse.errorMap(errors);
     }
 
+    @ExceptionHandler(Exception.class)
+    public ApiRestResponse handlerException(Exception e) {
+        return ApiRestResponse.errorMsg(e.getMessage());
+    }
+
     private Map<String, String> getErrors(BindingResult result) {
         Map<String, String> map = new HashMap<>();
         List<FieldError> errorList = result.getFieldErrors();

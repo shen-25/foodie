@@ -43,4 +43,10 @@ public interface ItemsService {
     PageInfoResult searchByKeyword(String keywords, String sort, int page, int pageSize);
 
     List<ShopCartVO> selectItemsBySpecIds(String itemSpecIds);
+
+    ItemsSpec queryItemSpecById(String specId);
+
+    String queryItemMainImgById(String itemId);
+
+    void decreaseItemSpecStock(String itemSpecId, int buyCounts);
 }
